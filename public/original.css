@@ -1,0 +1,258 @@
+/* base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9f9f9;
+  color: #191442;
+  background-image: url("/bg_imag.png");
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 0 16px;
+}
+
+header {
+  background: #191442;
+  color: #fff;
+  padding: 24px 0 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flex layout for header content */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 16px;
+}
+
+header h1 {
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.25s;
+}
+
+nav a:hover, nav a:focus {
+  background: orange;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255,140,0,0.19);
+}
+
+/* Drop down menu */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background:#2a3745;
+  padding: 8px 0;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  min-width: 110px;
+  z-index: 1;
+}
+
+nav ul li:hover ul, nav ul li:focus-within ul {
+  display: block;
+}
+
+nav ul li ul li a {
+  font-size: 0.98rem;
+  color: #fff;
+  padding: 8px 16px;
+  display: block;
+}
+
+/* Cards section */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.cards {
+  flex: 1 1 220px;
+  padding: 36px 18px 20px 18px;
+  color: #fff;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.16);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.24s, box-shadow 0.24s;
+  min-width: 200px;
+  max-width: 340px;
+  cursor: pointer;
+  background: #191442;
+  position: relative;
+}
+
+.cards:hover, .cards:focus {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.16), 0 4px 16px orange;
+}
+
+.cards h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cards span {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+#footer-container {
+  background: #191442;
+  color: #fff;
+  margin-top: 36px;
+}
+
+footer {
+  margin-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  padding: 28px 16px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer span {
+  font-size: 1rem;
+  color: #fff;
+}
+
+footer h4 {
+  font-size: 1.05rem;
+  margin: 0;
+  color: coral !important;
+  display: inline-block;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#img-h2 {
+  text-align: center;
+  color: coral;
+}
+.img-stack img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid coral;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  section {
+    gap: 16px;
+  }
+  .cards {
+    max-width: 280px;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+  nav ul {
+    gap: 16px;
+  }
+  .container, .header-container {
+    padding: 0 5px;
+  }
+  section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+  .cards {
+    max-width: 100%;
+    min-width: 0;
+    padding: 28px 12px 14px 12px;
+  }
+  #footer-container {
+    border-radius: 0 0 12px 12px;
+  }
+  footer {
+    font-size: 0.94rem;
+    padding: 18px 7px;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 16px 0 0 0;
+    border-radius: 0;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  header h1 {
+    font-size: 1.13rem;
+    padding: 0 8px;
+  }
+  section {
+    gap: 12px;
+    margin: 24px 0;
+  }
+  #footer-container {
+    border-radius: 0;
+  }
+}
