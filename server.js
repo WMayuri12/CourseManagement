@@ -2,6 +2,7 @@ const express=require("express");
 const app=express();
 const studentRoute=require("./routes/student");
 const teacherRoute=require("./routes/teacher");
+const userRoute=require("./routes/user");
 const mongoose=require("mongoose");
 require("dotenv").config();
 const PORT=process.env.port;

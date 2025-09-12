@@ -5,9 +5,9 @@ body {
   color: #191442;
   /* background-image: url("/bg_imag.png"); */
 }
-     header {
+    header {
       background:linear-gradient(to right,#191442,#4b428e,#191442);
-      color: #fff;
+      color: gold;
       padding: 15px 20px;
       display: flex;
       align-items: center;

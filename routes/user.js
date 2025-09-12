@@ -6,3 +6,7 @@ router.get("/course",async(req,res)=>{
     res.render("courses.ejs",{courses,role:"user"})
 })
 module.exports=router;
+
+
+
+

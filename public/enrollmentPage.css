@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9f9f9;
+  color: #191442;
+  /* background-image: url("/bg_imag.png"); */
+}
+    header {
+      background:linear-gradient(to right,#191442,#4b428e,#191442);
+      color: gold;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-size: 1.5rem;
+}
+
+  .back-to-home {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: gold;
+  color: #191442;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-to-home:hover {
+  background: orange;
+}
+.enrollment {
+  display:flexbox;
+  justify-content:right;
+  margin :120px;  
+  
+}
+form{
+  height: 60px;
+}
+.enrollment button{
+  background-color: navy;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.enrollment button:hover {
+  background-color: #e6c200; /* darker gold on hover */
+}
+
+    /* footer */
+#footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(to right,#191442,#4b428e,#191442);
+  /* margin: 0 15px 0 0; */
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  padding: 16px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: white;
+}
+
