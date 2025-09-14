@@ -33,8 +33,9 @@ body {
   background: orange;
 }
 .enrollment {
-  display:flexbox;
-  justify-content:right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin :120px;  
   
 }
@@ -57,7 +58,7 @@ form{
   background-color: #e6c200; /* darker gold on hover */
 }
 
-    /* footer */
+/* footer */
 #footer-container{
   display: flex;
   align-items: center;
@@ -77,3 +78,169 @@ footer{
   color: white;
 }
 
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .back-to-home {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .enrollment {
+    margin: 40px 20px;   /* reduce margins on tablets */
+  display:flexbox;
+  justify-content:right;
+  margin :120px;  
+  }
+
+  form {
+    height: auto;
+    width: 90%;   /* shrink form width */
+  }
+
+  .enrollment button {
+    width: 100%;  /* full width button */
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .back-to-home {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .enrollment {
+    margin: 40px 20px;   /* reduce margins on tablets */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    height: auto;
+    width: 90%;   /* shrink form width */
+  }
+
+  .enrollment button {
+    width: 100%;  /* full width button */
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  .back-to-home {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .enrollment {
+    margin: 40px 20px;   /* reduce margins on tablets */
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    height: auto;
+    width: 90%;   /* shrink form width */
+  }
+
+  .enrollment button {
+    width: 100%;  /* full width button */
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  .back-to-home {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .enrollment {
+    margin: 20px 10px;
+  }
+
+  form {
+    width: 100%;   /* form takes full width */
+  }
+
+  .enrollment button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}

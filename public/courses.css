@@ -19,6 +19,7 @@ header {
       position: sticky;
       top: 0;
       z-index: 1000;
+      width: 100%;
 }
   .back-to-home {
   display: inline-block;
@@ -39,8 +40,6 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-
 }
 #searchInput {
   display: inline-block;
@@ -171,9 +170,9 @@ h4 {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  width: 100vw;
 
 }
-
 .enroll-button{
   margin-right: 15px;
   padding: 10px 15px;
@@ -184,12 +183,13 @@ h4 {
   text-decoration: none;
   transition: 0.3s ease;
   border:2px navy solid;
+  width: 100px;
 }
 .enroll-button:hover{
   background-color: rgb(44, 44, 131);
   color: white;
 }
-  /* footer */
+/* footer */
 #footer-container {
   text-align: center;
   padding: 10px;
@@ -209,4 +209,103 @@ footer {
   text-align: center;
   padding: 10px 0;
   /* z-index: 1000; */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .heading-search {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #searchInput {
+    width: 90%;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  #course-heading {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  #courseList {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns for tablets */
+    gap: 16px;
+  }
+
+  .course-item {
+    width: 20px;
+    padding: 12px;
+  }
+
+  .course-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .course-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .course-item button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .enroll-add-button {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .enroll-button {
+    width: 50%;
+    text-align: center;
+    } 
+}
+
+@media (max-width: 480px) {
+  #courseList {
+    grid-template-columns: 1fr; /* single column for mobiles */
+  }
+
+  header {
+    padding: 5px;
+    width:100%; 
+  }
+
+  #searchInput {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  #course-heading {
+    font-size: 1.2rem;
+  }
+
+  .course-item {
+    padding: 10px;
+  }
+
+  .course-item h3 {
+    font-size: 1rem;
+  }
+
+  .course-item h4 {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
 }

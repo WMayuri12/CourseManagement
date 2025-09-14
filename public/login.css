@@ -39,7 +39,7 @@ header {
   text-decoration: none;
   transition: 0.3s ease;
 }
-
+  
 .back-to-home:hover {
   background: orange;
 }
@@ -98,4 +98,63 @@ header {
   background:linear-gradient(to right,#191442,#4b428e,#191442);
   font-size: 1rem;
   font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form {
+    width: 90%; /* shrink form width */
+    padding: 20px;
+  }
+
+  .form h2 {
+    font-size: 1.5rem;
+  }
+
+  .form input, 
+  .form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .back-to-home {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  #footer-container {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    width: 95%; /* almost full width */
+    padding: 15px;
+  }
+
+  .form h2 {
+    font-size: 1.2rem;
+  }
+
+  .form input, 
+  .form button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  header {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #footer-container {
+    font-size: 0.8rem;
+  }
 }
